@@ -31,12 +31,12 @@
 
 <tr>
 <td> ans </td>
-<td> <input type="text" name="add" value="" id="ans"  disabled="disabled" /> </td>
+<td> <input type="text" name="add" value="" id="ans"  /> </td>
 </tr>
 
 <tr>
 <td> total </td>
-<td> <input type="button" name="add" value="add" id="add" onclick="add()"/> </td>
+<td> <input type="button" name="add" value="add" id="add" onclick="adwd()"/> </td>
 </tr>
 
 
@@ -44,23 +44,31 @@
 </form>
 
 
-<script language="javascript">
+<script language="javascript" type="text/javascript">
 
-
-function add(){
+//add() javascript ka pana function hai 
+function adwd(){
 
 num1=document.getElementById("num1").value;
+//alert(num1);
+
 num2=document.getElementById("num2").value;
-num3=document.getElemenntById("num3").value;
+//alert(num2);
+
+//element ki spling thek nhi thi 
+num3=document.getElementById("num3").value;
+//alert(num3);
+
+
 ans1=document.getElementById("ans").value;
 
 
 
-total = parseInt(num1)+parseInt(num2)+parseInt(num3);
+total = parseInt(num1) + parseInt(num2) + parseInt(num3);
+alert(total);
 
-
-document.getElementById("total").value=ans";
-
+document.getElementById("ans").value= total;
+//or total ki value ans ki value mai save hojae 
 }
 
 </script>
