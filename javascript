@@ -36,7 +36,7 @@
 
 <tr>
 <td> total </td>
-<td> <input type="button" name="add" value="add" id="add" onclick="add()"/> </td>
+<td> <input type="button" name="add" value="add" id="add" onclick="ad2d()"/> </td>
 </tr>
 
 
@@ -47,11 +47,12 @@
 <script language="javascript">
 
 
-function add(){
+function ad2d(){
+
 
 num1=document.getElementById("num1").value;
 num2=document.getElementById("num2").value;
-num3=document.getElemenntById("num3").value;
+num3=document.getElementById("num3").value;
 ans1=document.getElementById("ans").value;
 
 
@@ -59,7 +60,7 @@ ans1=document.getElementById("ans").value;
 total = parseInt(num1)+parseInt(num2)+parseInt(num3);
 
 
-document.getElementById("total").value=ans";
+document.getElementById("ans").value=total;
 
 }
 
