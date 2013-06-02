@@ -15,44 +15,62 @@
 <tr>
 <input type="text" id="ans" name="textbox" value=""/>
   <td>
-		<input type="button" id="b1" name="button1" value="1" onclick="cal()"/>
-		</td>
-	<td>
-		<input type="button" id="b2" name="button2" value="2" onclick="cal()"/>
-		</td>	
-		</tr>
-		
+<input type="button" id="b1" name="button1" value="1" onClick="one()"/>
+</td>
+<td>
+<input type="button" id="b2" name="button2" value="2" onClick="two()"/>
+</td>
+</tr>
+
 <tr>
-	<td>
-		<input type="button" id="t1" name="total1" value="total" width="10"/>
-		<input type="button" id="ad" name="plus" value="+" onclick="cal()"/>
-		</td>
-		</tr>
+<td>
+<input type="button" id="t1" name="total1" value="total" onClick="totals()" width="10"/>
+<input type="button" id="ad" name="plus" value="+" onClick="cal()"/>
+<input type="button" id="ce" name="CE" value="CE" onClick="cer()"/>
+</td>
+</tr>
 
 </table>
 
 </form>
 
 <script language="javascript">
-
-
-function cal(){
-
-
+clearans= document.getElementById("ans").value=="";
 num1=document.getElementById("b1").value;
 num2=document.getElementById("b2").value;
-a=document.getElementById("ad").value;
 
 
-document.getElementById("ans").value= num1;
+function one(){
 
-//document.getElementById("ans").value= num2;
+num1=document.getElementById("b1").value;
+Num1=document.getElementById("ans").value+=num1;
 
-//document.getElementById("ans").value= a;
+} 
 
+function two(){
+
+num2=document.getElementById("b2").value;
+Num2=document.getElementById("ans").value+=num2;
+
+} 
+function cal(){
+numadd=document.getElementById("ad").value;
+Numadd=document.getElementById("ans").value+=numadd;
 }
+function totals(){
+x=document.getElementById("ans").value;
+totalvar = eval(x);
+
+document.getElementById("ans").value+="="+totalvar;
+
+} 
+
+function cer(){
+
+document.getElementById("ans").value="";
 
 
+} 
 </script>
 
 </body>
